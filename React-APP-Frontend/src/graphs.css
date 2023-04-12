@@ -1,0 +1,68 @@
+.Charts-group{
+    padding: 0px 10px;
+    padding-bottom: 10px;
+    overflow:scroll;
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "yearVsCount endYearVsCount"
+    "sectorVsTopics yearVsSector "
+    "sectorVsLike sectorVsCounts";
+    gap:10px
+    /* grid-template-rows: ; */
+}
+
+.Charts-group::-webkit-scrollbar {
+    display: none;
+}
+
+.Charts-group>*{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(0,0,0,0.1);
+    -webkit-box-shadow: 4px 5px 10px -5px rgba(0,0,0,0.61);
+    -moz-box-shadow: 4px 5px 10px -5px rgba(0,0,0,0.61);
+    box-shadow: 4px 5px 10px -5px rgba(0,0,0,0.61);
+}
+
+.endYearVsCount{
+    grid-area: endYearVsCount;
+
+}
+
+.sectorVsCounts{
+    grid-area: sectorVsCounts;
+
+}
+
+.sectorVsLike{
+    grid-area:sectorVsLike ;
+}
+
+.sectorVsTopics{
+    grid-area:sectorVsTopics;
+}
+
+.yearVsCount{
+    grid-area: yearVsCount ;
+}
+
+.yearVsSector{
+    grid-area: yearVsSector ;
+}
+
+@media(max-width:576px){
+    .Charts-group{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "yearVsCount" 
+        "endYearVsCount"
+        "sectorVsTopics" 
+        "yearVsSector"
+        "sectorVsLike"
+        "sectorVsCounts";
+        gap:10px
+        /* grid-template-rows: ; */
+    }
+}
